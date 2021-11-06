@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return Auth::check() ? response()->redirectToRoute('home') : view('welcome');
 });
 
 Auth::routes();
@@ -23,4 +23,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('logout', function () {
     Auth::logout();
     return response()->redirectTo('/');
+});
+
+Route::name('app.')->group(function () {
+    Route::name('character.')->prefix('character')->group(function () {
+        Route::put('create', "CharactersController@CreateCharacter")->name('create');
+    });
 });

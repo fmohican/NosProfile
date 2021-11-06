@@ -1,5 +1,2 @@
-try {
-    window.Popper = require('popper.js').default;
-    window.$ = window.jQuery = require('jquery');
-    require('bootstrap');
-} catch (e) {}
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+window.$ = window.jQuery = require('jquery');

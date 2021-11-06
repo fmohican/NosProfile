@@ -8,4 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Characters extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'account',
+        'family',
+        'level',
+        'clevel',
+        'gender',
+        'classes',
+        'server',
+        'slug',
+        'image',
+        'background',
+    ];
 }

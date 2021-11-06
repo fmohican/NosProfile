@@ -17,12 +17,25 @@ class CreateCharactersTable extends Migration
             $table->id();
             $table->string("name");
             $table->string("slug");
-            $table->longText("avatar");
-            $table->longText("image");
-            $table->longText("background");
+            $table->longText("avatar")->nullable();
+            $table->longText("image")->nullable();
+            $table->longText("background")->nullable();
+            $table->enum('gender', [
+                "Male",
+                "Female",
+            ]);
+            $table->enum("classes", [
+                "Adventurer",
+                "Sorcerer",
+                "Archer",
+                "Swordsman",
+                "Martial Artist",
+            ]);
             $table->integer("level");
             $table->integer('clevel');
-            $table->string('family');
+            $table->string('family')->nullable();
+            $table->bigInteger('server')->unsigned();
+            $table->foreign('server')->references('id')->on('servers');
             $table->bigInteger('account')->unsigned();
             $table->foreign('account')->references('id')->on('users');
             $table->softDeletes();
