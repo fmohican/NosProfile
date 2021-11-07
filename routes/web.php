@@ -28,5 +28,10 @@ Route::get('logout', function () {
 Route::name('app.')->group(function () {
     Route::name('character.')->prefix('character')->group(function () {
         Route::put('create', "CharactersController@CreateCharacter")->name('create');
+        Route::prefix('details/{id}')->name('details.')->group(function () {
+            Route::get('/', 'CharactersController@ViewCharacter')->name('view');
+        });
     });
 });
+
+Route::get('#')->name('#');

@@ -53,15 +53,15 @@
 
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <li>
-                                        <a class="dropdown-item" href="{{ route('logout') }}"
-                                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                            {{ __('Logout') }}
+                                        <a class="dropdown-item" href="#">
+                                            Change Password
                                         </a>
                                     </li>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
+                                    <li>
+                                        <a class="dropdown-item" href="{{ route('logout') }}">
+                                            Logout
+                                        </a>
+                                    </li>
                                 </ul>
                             </li>
                         @endguest
@@ -74,7 +74,12 @@
             @yield('content')
         </main>
     </div>
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 </body>
 
 </html>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Characters;
+use App\Models\Equipment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
@@ -39,5 +40,21 @@ class CharactersController extends Controller
         ]);
 
         return back();
+    }
+
+    public function ViewCharacter($id) {
+        try {
+            $character = Characters::findOrFail($id);
+            $equipment = Equipment::where('characters', $id)->get();
+            if(Auth::user()->id !== $character->account)
+                throw new \Exception("You're not allowed to view this character.");
+
+            return view('character.main', [
+                "character" => $character,
+                "equipment" => $equipment,
+            ]);
+        } catch (\Exception $e) {
+            return back()->withErrors($e);
+        }
     }
 }

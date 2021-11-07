@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Server;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -24,7 +25,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $character = Auth::user()->characters;
+        $character = Auth::user()->characters->map(function ($rows) {
+            $rows->server = Server::where('id', $rows->server)->first();
+            return $rows;
+        });
         return view('home', [
             "characters" => $character,
         ]);

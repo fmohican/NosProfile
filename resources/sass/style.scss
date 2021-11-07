@@ -1,0 +1,92 @@
+img.avatar {
+    min-height: 15vh;
+}
+.slot {
+    background-size: cover !important;
+    width: 4.58em;
+    height: 4.5em;
+    margin-left: 1em;
+    display: flex;
+    align-items: center;
+    &-mask {
+        @extend .slot;
+        background: url('slots/mask.png');
+    }
+    &-headband {
+        @extend  .slot;
+        background: url('slots/headband.png');
+    }
+    &-fairy {
+        @extend  .slot;
+        background: url('slots/fairy.png');
+    }
+    &-main_w {
+        @extend  .slot;
+        background: url('slots/main_w.png');
+    }
+    &-card {
+        @extend  .slot;
+        background: url('slots/card.png');
+    }
+    &-secondary_w{
+        @extend  .slot;
+        background: url('slots/secondary_w.png');
+    }
+    &-gloves {
+        @extend  .slot;
+        background: url('slots/gloves.png');
+    }
+    &-armor {
+        @extend  .slot;
+        background: url('slots/armor.png');
+    }
+    &-shoes {
+        @extend  .slot;
+        background: url('slots/shoes.png');
+    }
+    &-ring {
+        @extend  .slot;
+        background: url('slots/ring.png');
+    }
+    &-necklet {
+        @extend  .slot;
+        background: url('slots/necklet.png');
+    }
+    &-bracelet {
+        @extend  .slot;
+        background: url('slots/bracelet.png');
+    }
+    &-bracelet {
+        @extend  .slot;
+        background: url('slots/bracelet.png');
+    }
+    &-wing {
+        @extend  .slot;
+        background: url('slots/wings.png');
+    }
+    &-empty {
+        @extend  .slot;
+        background: transparent;
+    }
+    &-amulet {
+        @extend  .slot;
+        background: url('slots/amulet.png');
+    }
+    &-w_skin {
+        @extend  .slot;
+        background: url('slots/w_skin.png');
+    }
+    &-c_hat {
+        @extend  .slot;
+        background: url('slots/c_mask.png');
+    }
+    &-c_body {
+        @extend  .slot;
+        background: url('slots/c_body.png');
+    }
+}
+.slot > img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}

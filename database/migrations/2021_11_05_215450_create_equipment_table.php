@@ -15,8 +15,9 @@ class CreateEquipmentTable extends Migration
     {
         Schema::create('equipment', function (Blueprint $table) {
             $table->id();
-            $table->longText('icon');
-            $table->longText('equipment');
+            $table->bigInteger('item')->unsigned();
+            $table->foreign('item')->references('id')->on('items');
+            $table->longText('image');
             $table->smallInteger('slot')->unsigned();
             $table->bigInteger('characters')->unsigned();
             $table->foreign('characters')->references('id')->on('characters');
