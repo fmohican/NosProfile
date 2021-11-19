@@ -29,7 +29,7 @@
                     </div>
                     <div class="col-12 mb-3">
                         <label for="ShareURL" class="form-label">Share This Character</label>
-                        <input type="text" min="1" max="60" class="form-control" id="ShareURL" value="{{route("#")}}" readonly>
+                        <input type="text" min="1" max="60" class="form-control" id="ShareURL" value="{{ route('app.public.share', ["server" => $character->server->short, "account" => Auth::user()->uuid, "slug" => $character->slug]) }}" readonly>
                     </div>
                 </div>
             </div>

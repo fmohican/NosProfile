@@ -15,12 +15,20 @@ class Server extends Seeder
     {
         $servers = [
             [
+                "International - 2",
+                "INT-2",
+            ],
+            [
                 "International - 1",
                 "INT-1",
             ],
             [
-                "International - 2",
-                "INT-2",
+                "Cylloan",
+                "US-1"
+            ],
+            [
+                "NosCitadel",
+                "UK-1"
             ],
         ];
         foreach($servers as $data) {

@@ -3,11 +3,12 @@ img.avatar {
 }
 .slot {
     background-size: cover !important;
-    width: 4.58em;
+    width: 4.5em;
     height: 4.5em;
     margin-left: 1em;
     display: flex;
     align-items: center;
+    cursor: pointer;
     &-mask {
         @extend .slot;
         background: url('slots/mask.png');
@@ -20,7 +21,7 @@ img.avatar {
         @extend  .slot;
         background: url('slots/fairy.png');
     }
-    &-main_w {
+    &-primary {
         @extend  .slot;
         background: url('slots/main_w.png');
     }
@@ -28,7 +29,7 @@ img.avatar {
         @extend  .slot;
         background: url('slots/card.png');
     }
-    &-secondary_w{
+    &-secondary{
         @extend  .slot;
         background: url('slots/secondary_w.png');
     }
@@ -84,9 +85,50 @@ img.avatar {
         @extend  .slot;
         background: url('slots/c_body.png');
     }
+    &-slot {
+        @extend .slot;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        background: linear-gradient(#999A, #666A);
+        border: 4px solid #000;
+        border-radius: 4px;
+    }
 }
 .slot > img {
     width: 50px;
     height: 50px;
     cursor: pointer;
+}
+.slot > label > img {
+    cursor: pointer;
+}
+.itemRadio:checked + label {
+    border: 5px solid #fafafa;
+    border-radius: 4px;
+    padding: 13px;
+    background: #212121;
+}
+.ms-dd .ms-list-option.option-selected, .ms-dd .ms-optgroup ul .ms-list-option.option-selected {
+    background: #424242;
+}
+.ms-dd .ms-dd-header .option-selected {
+    color: white;
+}
+.ms-dd .ms-list-option, .ms-dd .ms-optgroup ul .ms-list-option {
+    color: whitesmoke;
+}
+.ms-dd .ms-list-option:hover, .ms-dd .ms-optgroup ul .ms-list-option:hover {
+    color: #a5a5a5;
+}
+.ms-dd .ms-options {
+    background: #424242;
+}
+.ms-dd .ms-optgroup:hover {
+    background: #3d3d3d;
+    color: #fff;
+}
+.ms-dd .ms-list-option:hover, .ms-dd .ms-optgroup ul .ms-list-option:hover {
+    background: #212121;
 }

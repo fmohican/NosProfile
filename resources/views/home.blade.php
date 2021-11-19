@@ -27,7 +27,7 @@
                         New Character?
                     </div>
                     <div class="card-body text-center">
-                        <h2><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Create Character</a></h2>
+                        <h2><a href="#" data-bs-toggle="modal" data-bs-target="#createCharacter">Create Character</a></h2>
                     </div>
                     <div class="card-footer">
                         <small class="text-muted">On this window, you can create new characters.</small>

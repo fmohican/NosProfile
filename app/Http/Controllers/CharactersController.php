@@ -26,10 +26,13 @@ class CharactersController extends Controller
             'Classes' => 'required',
             'server' => 'required',
         ]);
-
+        $slug = Str::slug($request->input('Name'), "_");
+        if(Characters::where('slug', $slug)->exists()) {
+            $slug = $slug."#".rand(1000, 9999);
+        }
         Characters::create([
             "name" => $request->input('Name'),
-            "slug" => Str::slug($request->input('Name'), "_"),
+            "slug" => $slug,
             "level" => $request->input('Level'),
             "clevel" => $request->input('CLevel'),
             "family" => $request->input('FName'),
@@ -45,16 +48,37 @@ class CharactersController extends Controller
     public function ViewCharacter($id) {
         try {
             $character = Characters::findOrFail($id);
-            $equipment = Equipment::where('characters', $id)->get();
             if(Auth::user()->id !== $character->account)
                 throw new \Exception("You're not allowed to view this character.");
 
             return view('character.main', [
                 "character" => $character,
-                "equipment" => $equipment,
+                "equipment" => $this->ItemHelper($character),
             ]);
         } catch (\Exception $e) {
             return back()->withErrors($e);
         }
+    }
+
+    public function ItemHelper($character) {
+        return (object) [
+            "mask" => Equipment::where('characters', $character->id)->where('slot', 'mask')->first(),
+            "headband" => Equipment::where('characters', $character->id)->where('slot', 'headband')->first(),
+            "fairy" => Equipment::where('characters', $character->id)->where('slot', 'fairy')->first(),
+            "primary" => Equipment::where('characters', $character->id)->where('slot', 'primary')->first(),
+            "card" => Equipment::where('characters', $character->id)->where('slot', 'card')->first(),
+            "secondary" => Equipment::where('characters', $character->id)->where('slot', 'secondary')->first(),
+            "gloves" => Equipment::where('characters', $character->id)->where('slot', 'gloves')->first(),
+            "armor" => Equipment::where('characters', $character->id)->where('slot', 'armor')->first(),
+            "shoes" => Equipment::where('characters', $character->id)->where('slot', 'shoes')->first(),
+            "ring" => Equipment::where('characters', $character->id)->where('slot', 'ring')->first(),
+            "necklet" => Equipment::where('characters', $character->id)->where('slot', 'necklet')->first(),
+            "bracelet" => Equipment::where('characters', $character->id)->where('slot', 'bracelet')->first(),
+            "wing" => Equipment::where('characters', $character->id)->where('slot', 'wing')->first(),
+            "amulet" => Equipment::where('characters', $character->id)->where('slot', 'amulet')->first(),
+            "w_skin" => Equipment::where('characters', $character->id)->where('slot', 'w_skin')->first(),
+            "c_hat" => Equipment::where('characters', $character->id)->where('slot', 'c_hat')->first(),
+            "c_body" => Equipment::where('characters', $character->id)->where('slot', 'c_body')->first(),
+        ];
     }
 }

@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
     <div class="container">
         @if($errors->any())
@@ -23,41 +22,208 @@
                     </div>
                     <div class="card-body text-center">
                         <div class="container-fluid">
+                            {{-- Mask Headband Fairy --}}
                             <div class="row justify-content-center">
                                 <div class="col-4 slot-mask">
-                                    <img src="{{asset('img/Archer/Armour/93.png')}}"  alt="mask"/>
+                                    @if($equipment->mask)
+                                        <img
+                                            src="{{asset('img/items/'.$equipment->mask->item()->vnum.".png")}}"
+                                            alt="{{$equipment->mask->item()->name}}"
+                                            data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom"
+                                            title="<img src='{{asset($equipment->mask->image)}}' alt='equipment'/>"
+                                        />
+                                    @endif
                                 </div>
-                                <div class="col-4 slot-headband mt-3"></div>
-                                <div class="col-4 slot-fairy"></div>
+                                <div class="col-4 mt-3 slot-headband">
+                                    @if($equipment->headband)
+                                        <img
+                                            src="{{asset('img/items/'.$equipment->headband->item()->vnum.".png")}}"
+                                            alt="{{$equipment->headband->item()->name}}"
+                                            data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom"
+                                            title="<img src='{{asset($equipment->headband->image)}}' alt='equipment'/>"
+                                        />
+                                    @endif
+                                </div>
+                                <div class="col-4 slot-fairy">
+                                    @if($equipment->fairy)
+                                        <img
+                                            src="{{asset('img/items/'.$equipment->fairy->item()->vnum.".png")}}"
+                                            alt="{{$equipment->fairy->item()->name}}"
+                                            data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom"
+                                            title="<img src='{{asset($equipment->fairy->image)}}' alt='equipment'/>"
+                                        />
+                                    @endif
+                                </div>
                             </div>
+                            {{-- Main Card Secondary --}}
                             <div class="row justify-content-center">
-                                <div class="col-4 slot-main_w"></div>
-                                <div class="col-4 slot-card mt-3"></div>
-                                <div class="col-4 slot-secondary_w"></div>
+                                <div class="col-4 slot-primary">
+                                    @if($equipment->primary)
+                                        <img
+                                            src="{{asset('img/items/'.$equipment->primary->item()->vnum.".png")}}"
+                                            alt="{{$equipment->primary->item()->name}}"
+                                            data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom"
+                                            title="<img src='{{asset($equipment->primary->image)}}' alt='equipment'/>"
+                                        />
+                                    @endif
+                                </div>
+                                <div class="col-4 mt-3 slot-card">
+                                    @if($equipment->card)
+                                        <img
+                                            src="{{asset('img/items/'.$equipment->card->item()->vnum.".png")}}"
+                                            alt="{{$equipment->card->item()->name}}"
+                                            data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom"
+                                            title="<img src='{{asset($equipment->card->image)}}' alt='equipment'/>"
+                                        />
+                                    @endif
+                                </div>
+                                <div class="col-4 slot-secondary">
+                                    @if($equipment->secondary)
+                                        <img
+                                            src="{{asset('img/items/'.$equipment->secondary->item()->vnum.".png")}}"
+                                            alt="{{$equipment->secondary->item()->name}}"
+                                            data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom"
+                                            title="<img src='{{asset($equipment->secondary->image)}}' alt='equipment'/>"
+                                        />
+                                    @endif
+                                </div>
                             </div>
+                            {{-- Gloves Armor Shoes --}}
                             <div class="row justify-content-center">
-                                <div class="col-4 slot-gloves"></div>
-                                <div class="col-4 slot-armor mt-3"></div>
-                                <div class="col-4 slot-shoes"></div>
+                                <div class="col-4 slot-gloves">
+                                    @if($equipment->gloves)
+                                        <img
+                                            src="{{asset('img/items/'.$equipment->gloves->item()->vnum.".png")}}"
+                                            alt="{{$equipment->gloves->item()->name}}"
+                                            data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom"
+                                            title="<img src='{{asset($equipment->gloves->image)}}' alt='equipment'/>"
+                                        />
+                                    @endif
+                                </div>
+                                <div class="col-4  mt-3 slot-armor">
+                                    @if($equipment->armor)
+                                        <img
+                                            src="{{asset('img/items/'.$equipment->armor->item()->vnum.".png")}}"
+                                            alt="{{$equipment->armor->item()->name}}"
+                                            data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom"
+                                            title="<img src='{{asset($equipment->armor->image)}}' alt='equipment'/>"
+                                        />
+                                    @endif
+                                </div>
+                                <div class="col-4 slot-shoes">
+                                    @if($equipment->shoes)
+                                        <img
+                                            src="{{asset('img/items/'.$equipment->shoes->item()->vnum.".png")}}"
+                                            alt="{{$equipment->shoes->item()->name}}"
+                                            data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom"
+                                            title="<img src='{{asset($equipment->shoes->image)}}' alt='equipment'/>"
+                                        />
+                                    @endif
+                                </div>
                             </div>
+                            {{-- Ring Necklet Bracelet --}}
                             <div class="row justify-content-center">
-                                <div class="col-4 slot-ring"></div>
-                                <div class="col-4 slot-necklet mt-3"></div>
-                                <div class="col-4 slot-bracelet"></div>
+                                <div class="col-4 slot-ring">
+                                    @if($equipment->ring)
+                                        <img
+                                            src="{{asset('img/items/'.$equipment->ring->item()->vnum.".png")}}"
+                                            alt="{{$equipment->ring->item()->name}}"
+                                            data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom"
+                                            title="<img src='{{asset($equipment->ring->image)}}' alt='equipment'/>"
+                                        />
+                                    @endif
+                                </div>
+                                <div class="col-4 mt-3 slot-necklet">
+                                    @if($equipment->necklet)
+                                        <img
+                                            src="{{asset('img/items/'.$equipment->necklet->item()->vnum.".png")}}"
+                                            alt="{{$equipment->necklet->item()->name}}"
+                                            data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom"
+                                            title="<img src='{{asset($equipment->necklet->image)}}' alt='equipment'/>"
+                                        />
+                                    @endif
+                                </div>
+                                <div class="col-4 slot-bracelet">
+                                    @if($equipment->bracelet)
+                                        <img
+                                            src="{{asset('img/items/'.$equipment->bracelet->item()->vnum.".png")}}"
+                                            alt="{{$equipment->bracelet->item()->name}}"
+                                            data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom"
+                                            title="<img src='{{asset($equipment->bracelet->image)}}' alt='equipment'/>"
+                                        />
+                                    @endif
+                                </div>
                             </div>
+                            {{-- Wings Null Amulet --}}
                             <div class="row justify-content-center">
-                                <div class="col-4 slot-wing"></div>
+                                <div class="col-4 slot-wing">
+                                    @if($equipment->wing)
+                                        <img
+                                            src="{{asset('img/items/'.$equipment->wing->item()->vnum.".png")}}"
+                                            alt="{{$equipment->wing->item()->name}}"
+                                            data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom"
+                                            title="<img src='{{asset($equipment->wing->image)}}' alt='equipment'/>"
+                                        />
+                                    @endif
+                                </div>
                                 <div class="col-4 slot-empty"></div>
-                                <div class="col-4 slot-amulet"></div>
+                                <div class="col-4 slot-amulet">
+                                    @if($equipment->amulet)
+                                        <img
+                                            src="{{asset('img/items/'.$equipment->amulet->item()->vnum.".png")}}"
+                                            alt="{{$equipment->amulet->item()->name}}"
+                                            data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom"
+                                            title="<img src='{{asset($equipment->amulet->image)}}' alt='equipment'/>"
+                                        />
+                                    @endif
+                                </div>
                             </div>
+                            {{-- Skin CHat CBody --}}
                             <div class="row justify-content-center mt-3">
-                                <div class="col-4 slot-w_skin"></div>
-                                <div class="col-4 slot-c_hat"></div>
-                                <div class="col-4 slot-c_body"></div>
+                                <div class="col-4 slot-w_skin">
+                                    @if($equipment->w_skin)
+                                        <img
+                                            src="{{asset('img/items/'.$equipment->w_skin->item()->vnum.".png")}}"
+                                            alt="{{$equipment->w_skin->item()->name}}"
+                                            data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom"
+                                            title="<img src='{{asset($equipment->w_skin->image)}}' alt='equipment'/>"
+                                        />
+                                    @endif
+                                </div>
+                                <div class="col-4 slot-c_hat">
+                                    @if($equipment->c_hat)
+                                        <img
+                                            src="{{asset('img/items/'.$equipment->c_hat->item()->vnum.".png")}}"
+                                            alt="{{$equipment->c_hat->item()->name}}"
+                                            data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom"
+                                            title="<img src='{{asset($equipment->c_hat->image)}}' alt='equipment'/>"
+                                        />
+                                    @endif
+                                </div>
+                                <div class="col-4 slot-c_body">
+                                    @if($equipment->c_body)
+                                        <img
+                                            src="{{asset('img/items/'.$equipment->c_body->item()->vnum.".png")}}"
+                                            alt="{{$equipment->c_body->item()->name}}"
+                                            data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="bottom"
+                                            title="<img src='{{asset($equipment->c_body->image)}}' alt='equipment'/>"
+                                        />
+                                    @endif
+                                </div>
                             </div>
+                            {{-- Buttons --}}
                             <div class="row justify-content-center mt-3">
                                 <div class="col-12">
-                                    <a href="#">Edit Characters Details</a>
+                                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                                        <button type="button" class="btn btn-primary">Edit Character</button>
+                                        <div class="btn-group" role="group">
+                                            <button id="btnGroupDrop1" type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                                <li><a class="dropdown-item" href="{{route('app.character.details.deleteAll', [$character->id])}}">Delete all Items</a></li>
+                                                <li><a class="dropdown-item" href="#">Delete all Inventory</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -69,4 +235,21 @@
             </div>
         </div>
     </div>
+    {{-- Modal Component --}}
+    @include('character.parts.SetItemModal')
 @endsection
+@push('js')
+    <script type="text/javascript">
+        function getSlot(data) {
+            return data.className.split('slot-')[1];
+        }
+        function OnSlotClick() {
+            $(document).on('click', '[class*="slot"]', function () {
+                window.location.href = '{{route('app.character.details.view', $character->id)}}/'+getSlot(this)+'/edit';
+            })
+        }
+        $(document).ready(function () {
+            OnSlotClick();
+        });
+    </script>
+@endpush

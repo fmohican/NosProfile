@@ -8,6 +8,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    @stack('css')
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
@@ -73,13 +74,31 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+        <footer>
+            <nav class="navbar fixed-bottom navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <span class="navbar-text">
+                        Images are from <a href="https://en.nostale.gameforge.com/landing/partner">NosTale</a> belong to <a href="https://gameforge.com/" rel="nofollow,noopener">Gameforge</a> / <a href="http://entwell.com/" rel="nofollow,nooopener">Entwell</a>, used under <a href="">Fair Use</a>. This website is not affiliate with Gameforge or Entwell. This website is non-profit.
+                    </span>
+                </div>
+            </nav>
+        </footer>
     </div>
     <script src="{{ asset('js/app.js') }}" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $('[data-toggle="tooltip"]').tooltip();
+            let popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+            let popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                return new bootstrap.Popover(popoverTriggerEl)
+            })
+            let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl)
+            })
         });
     </script>
+    @stack('js')
 </body>
 
 </html>

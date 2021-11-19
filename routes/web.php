@@ -30,7 +30,13 @@ Route::name('app.')->group(function () {
         Route::put('create', "CharactersController@CreateCharacter")->name('create');
         Route::prefix('details/{id}')->name('details.')->group(function () {
             Route::get('/', 'CharactersController@ViewCharacter')->name('view');
+            Route::get('{slot}/edit', 'EquipmentController@EditEquipment')->name('editEquipment');
+            Route::put('{slot}/save', 'EquipmentController@SaveEquipment')->middleware('optimizeImages')->name('saveEquipment');
+            Route::get('delete-all', 'EquipmentController@DeleteAllEquipment')->name('deleteAll');
         });
+    });
+    Route::name('public.')->prefix('{server}/{account}/{slug}')->group(function() {
+        Route::get('/', [\App\Http\Controllers\PublicController::class, 'index'])->name('share');
     });
 });
 

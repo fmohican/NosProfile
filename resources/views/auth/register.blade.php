@@ -8,9 +8,10 @@
                     <div class="card-header">{{ __('Register') }}</div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{ route('register') }}">
+                        <h2 class="text-center">Please <b>DO NOT</b> use same email and password as your gammeforge account!</h2>
+                        <h4 class="text-center">This website is <b>NOT affiliate</b> with Gameforge</h4>
+                        <form method="POST" class="mt-5" action="{{ route('register') }}">
                             @csrf
-
                             <div class="mb-3 row">
                                 <label for="name" class="col-md-4 col-form-label text-end">
                                     {{ __('Name') }} :
@@ -76,7 +77,7 @@
                             </div>
 
                             <div class="mb-3 row">
-                                <div class="col-md-6 offset-md-4">
+                                <div class="col-12 text-center">
                                     <button type="submit" class="btn btn-primary">
                                         {{ __('Register') }}
                                     </button>
