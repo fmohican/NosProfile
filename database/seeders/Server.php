@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Hash;
 
 class Server extends Seeder
 {
@@ -14,11 +13,29 @@ class Server extends Seeder
      */
     public function run()
     {
-        \App\Models\Server::create([
-            "name" => "Fmohican",
-            "email" => "fmohican@example.com",
-            "password" => Hash::make('admin'),
-            "access" => 5,
-        ]);
+        $servers = [
+            [
+                "International - 2",
+                "INT-2",
+            ],
+            [
+                "International - 1",
+                "INT-1",
+            ],
+            [
+                "Cylloan",
+                "US-1"
+            ],
+            [
+                "NosCitadel",
+                "UK-1"
+            ],
+        ];
+        foreach($servers as $data) {
+            \App\Models\Server::create([
+                "name" => $data[0],
+                "short" => $data[1]
+            ]);
+        }
     }
 }
