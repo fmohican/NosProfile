@@ -15,6 +15,229 @@ class Items extends Seeder
     public function run()
     {
         $items = [
+            "cards" => [
+                [
+                    "vnum" => 901,
+                    "name" => "Warrior",
+                    "classes" => "Swordsman",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 902,
+                    "name" => "Ninja",
+                    "classes" => "Swordsman",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 909,
+                    "name" => "Crusader",
+                    "classes" => "Swordsman",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 910,
+                    "name" => "Berserker",
+                    "classes" => "Swordsman",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 2544,
+                    "name" => "Gladiator",
+                    "classes" => "Swordsman",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 2588,
+                    "name" => "Battle Monk",
+                    "classes" => "Swordsman",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 2654,
+                    "name" => "Death Reaper",
+                    "classes" => "Swordsman",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 2706,
+                    "name" => "Renegade",
+                    "classes" => "Swordsman",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 4496,
+                    "name" => "Waterfall Berserker",
+                    "classes" => "Swordsman",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 903,
+                    "name" => "Ranger",
+                    "classes" => "Archer",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 904,
+                    "name" => "Assassin",
+                    "classes" => "Archer",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 911,
+                    "name" => "Destroyer",
+                    "classes" => "Archer",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 912,
+                    "name" => "Wild Keeper",
+                    "classes" => "Archer",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 2545,
+                    "name" => "Fire Cannoneer",
+                    "classes" => "Archer",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 2589,
+                    "name" => "Scout",
+                    "classes" => "Archer",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 2655,
+                    "name" => "Demon Hunter",
+                    "classes" => "Archer",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 2707,
+                    "name" => "Avenging Angel",
+                    "classes" => "Archer",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 4494,
+                    "name" => "Sunchaser",
+                    "classes" => "Archer",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 905,
+                    "name" => "Red Magician",
+                    "classes" => "Sorcerer",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 906,
+                    "name" => "Holy Magician",
+                    "classes" => "Sorcerer",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 913,
+                    "name" => "Blue Magician",
+                    "classes" => "Sorcerer",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 914,
+                    "name" => "Dark Gunner",
+                    "classes" => "Sorcerer",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 2546,
+                    "name" => "Vulcano",
+                    "classes" => "Sorcerer",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 2590,
+                    "name" => "Tide Lord",
+                    "classes" => "Sorcerer",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 2656,
+                    "name" => "Seer",
+                    "classes" => "Sorcerer",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 2708,
+                    "name" => "Archmage",
+                    "classes" => "Sorcerer",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 4497,
+                    "name" => "Voodoo Prist",
+                    "classes" => "Sorcerer",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 908,
+                    "name" => "Jajamaru",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 4405,
+                    "name" => "Angler",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 4440,
+                    "name" => "Chef",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 900,
+                    "name" => "Pyjama",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 907,
+                    "name" => "Chicken",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 915,
+                    "name" => "Pirate",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 4110,
+                    "name" => "Wedding",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 4048,
+                    "name" => "Draconic Fist",
+                    "classes" => "Martial Artist",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 4093,
+                    "name" => "Mystic Arts",
+                    "classes" => "Martial Artist",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 4126,
+                    "name" => "Master Wolf",
+                    "classes" => "Martial Artist",
+                    "slot" => "card",
+                ],
+                [
+                    "vnum" => 4151,
+                    "name" => "Demon Warrior",
+                    "classes" => "Martial Artist",
+                    "slot" => "card",
+                ],
+            ],
             "fairys" => [
                 [
                     "vnum" => "256",
@@ -5409,7 +5632,361 @@ class Items extends Seeder
                     "gender" => "Unisex",
                     "slot" => "c_body"
                 ]
-            ]
+            ],
+            "ma_primary" => [
+                [
+                    "vnum" => "4014",
+                    "name" => "Steel Fist",
+                    "slot" => "primary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4012",
+                    "name" => "Short Riding Gauntlet",
+                    "slot" => "primary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4013",
+                    "name" => "Martial Artist's Gauntlet",
+                    "slot" => "primary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4016",
+                    "name" => "Black Fist",
+                    "slot" => "primary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4012",
+                    "name" => "Toughened Leather Gauntlet",
+                    "slot" => "primary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4013",
+                    "name" => "Martial Artist's Leather Gauntlet",
+                    "slot" => "primary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4015",
+                    "name" => "Gauntlet of Power",
+                    "slot" => "primary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4017",
+                    "name" => "Apprentice Assassin's Gauntlet",
+                    "slot" => "primary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4017",
+                    "name" => "Sicario's Gauntlet",
+                    "slot" => "primary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4018",
+                    "name" => "Doom Fists' Gauntlet",
+                    "slot" => "primary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4019",
+                    "name" => "Cold Metal Gauntlet",
+                    "slot" => "primary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4020",
+                    "name" => "Ladine's Tear",
+                    "slot" => "primary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4021",
+                    "name" => "Fenris' Claw",
+                    "slot" => "primary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4022",
+                    "name" => "Fire Golem Gauntlet",
+                    "slot" => "primary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4023",
+                    "name" => "Chaos Scale Gauntlet",
+                    "slot" => "primary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4024",
+                    "name" => "Flame of Ifrit",
+                    "slot" => "primary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4025",
+                    "name" => "Sealed Goddess Fist",
+                    "slot" => "primary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4169",
+                    "name" => "Orc Sekraz Gauntlets",
+                    "slot" => "primary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4026",
+                    "name" => "Divine Fist",
+                    "slot" => "primary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4170",
+                    "name" => "Bear Loa Gauntlets",
+                    "slot" => "primary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4171",
+                    "name" => "Beast King's Gauntlets",
+                    "slot" => "primary",
+                    "classes" => "Martial Artist"
+                ]
+            ],
+            "ma_armor" => [
+                [
+                    "vnum" => "4029",
+                    "name" => "Trainee Martial Artist's Uniform",
+                    "slot" => "armor",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4031",
+                    "name" => "Grubby Riding Armour",
+                    "slot" => "armor",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4031",
+                    "name" => "Riding Armour",
+                    "slot" => "armor",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4032",
+                    "name" => "Black's Suit",
+                    "slot" => "armor",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4031",
+                    "name" => "Leather Armour",
+                    "slot" => "armor",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4032",
+                    "name" => "Toughened Leather Armour",
+                    "slot" => "armor",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4033",
+                    "name" => "Power Armour",
+                    "slot" => "armor",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4032",
+                    "name" => "Apprentice Assassin's Armour",
+                    "slot" => "armor",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4032",
+                    "name" => "Sicario's Armour",
+                    "slot" => "armor",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4033",
+                    "name" => "Doom Fists' Armour",
+                    "slot" => "armor",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4034",
+                    "name" => "Desert Robbers' Armour",
+                    "slot" => "armor",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4035",
+                    "name" => "Akamur Armour",
+                    "slot" => "armor",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4036",
+                    "name" => "Mysterious Traveller's Armour",
+                    "slot" => "armor",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4037",
+                    "name" => "Felice's Armour",
+                    "slot" => "armor",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4038",
+                    "name" => "Lord Cuarry's Armour",
+                    "slot" => "armor",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4039",
+                    "name" => "Challenger's Armour",
+                    "slot" => "armor",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4040",
+                    "name" => "Rumial's Holiness",
+                    "slot" => "armor",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4193",
+                    "name" => "Light Sekraz Armour",
+                    "slot" => "armor",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4041",
+                    "name" => "Champion's Armour",
+                    "slot" => "armor",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4194",
+                    "name" => "Bear Loa Light Armour",
+                    "slot" => "armor",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4195",
+                    "name" => "Carlio's Wrath Armour",
+                    "slot" => "armor",
+                    "classes" => "Martial Artist"
+                ]
+            ],
+            "ma_secondary" => [
+                [
+                    "vnum" => "4061",
+                    "name" => "One-Horse Bronze Token",
+                    "slot" => "secondary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4062",
+                    "name" => "Two-Horse Bronze Token",
+                    "slot" => "secondary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4063",
+                    "name" => "Three-Horse Bronze Token",
+                    "slot" => "secondary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4064",
+                    "name" => "One-Horse Silver Token",
+                    "slot" => "secondary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4065",
+                    "name" => "Two-Horse Silver Token",
+                    "slot" => "secondary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4066",
+                    "name" => "Three-Horse Silver Token",
+                    "slot" => "secondary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4067",
+                    "name" => "One-Horse Gold Token",
+                    "slot" => "secondary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4068",
+                    "name" => "Two-Horse Gold Token",
+                    "slot" => "secondary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4069",
+                    "name" => "Three-Horse Gold Token",
+                    "slot" => "secondary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4070",
+                    "name" => "Magic Blue Dragon Token",
+                    "slot" => "secondary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4071",
+                    "name" => "Magic White Tiger Token",
+                    "slot" => "secondary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4072",
+                    "name" => "Magic Red Phoenix Token",
+                    "slot" => "secondary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4073",
+                    "name" => "Magic Black Turtle Token",
+                    "slot" => "secondary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4181",
+                    "name" => "Sekraz Jade Token",
+                    "slot" => "secondary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4182",
+                    "name" => "Blessed Sekraz Jade Token",
+                    "slot" => "secondary",
+                    "classes" => "Martial Artist"
+                ],
+                [
+                    "vnum" => "4183",
+                    "name" => "Bear Loa Token",
+                    "slot" => "secondary",
+                    "classes" => "Martial Artist"
+                ]
+            ],
         ];
 
         foreach($items as $item)
@@ -5421,8 +5998,7 @@ class Items extends Seeder
             try {
                 \App\Models\Items::create($data);
             } catch (\Exception $exception) {
-                dd($data);
-                var_dump($data);
+                Log::debug("Item Creation Exection", [$data, $exception]);
             }
         }
     }
